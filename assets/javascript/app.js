@@ -1,11 +1,12 @@
 jQuery(document).ready(function () {
+    $(".answers1").hide();
 
     console.log("ready");
 
     var stopwatch = 120;
     var intervalId
 
-    var answers1 = "";
+    var answers1 = false;
 
     var correct = 0;
     var incorrect = 1;
@@ -22,6 +23,12 @@ jQuery(document).ready(function () {
         console.log("this registers");
         $("#startButton").text('Hide');
         $("#startButton").toggle();
+
+        //Hide the questions and answers until we press start
+        //Change the container size to fit all of the questions/answers when we press start
+        $(".answers1").text('Show');
+        $(".answers1").toggle();
+        answers1 = true;
 
 
         //My timer starts when start button is pressed
@@ -43,16 +50,7 @@ jQuery(document).ready(function () {
             }
         }
 
-
-
-
-
-        //Hide the questions and answers until we press start
-        //Change the container size to fit all of the questions/answers when we press start
-
-        $(".answers1").text(answers1);
-        answers = true;
-
+    
     });
 });
 
