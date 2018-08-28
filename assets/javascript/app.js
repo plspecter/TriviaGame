@@ -1,5 +1,9 @@
 jQuery(document).ready(function () {
     $(".answers1").hide();
+    $(".answers2").hide();
+    $(".answers3").hide();
+    $("#timeRemaining").hide();
+
 
     console.log("ready");
 
@@ -23,11 +27,13 @@ jQuery(document).ready(function () {
         console.log("this registers");
         $("#startButton").text('Hide');
         $("#startButton").toggle();
+        $("#timeRemaining").toggle();
 
         //Hide the questions and answers until we press start
         //Change the container size to fit all of the questions/answers when we press start
-        $(".answers1").text('Show');
         $(".answers1").toggle();
+        $(".answers2").toggle();
+        $(".answers3").toggle();
         answers1 = true;
 
 
