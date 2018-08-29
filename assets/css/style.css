@@ -1,17 +1,30 @@
+#stopwatch {
+    size: 12px;
+}
+
+#submitAnswers {
+    position: relative;
+    top: 450px;
+    left: 265px;
+    height: 60px;
+    width: 200px;
+    font-size: 30px;
+}
+
 .answers1 {
     position: relative;
     left: 120px;
-    top: 150px;
+    top: 60px;
 }
 .answers2 {
     position: relative;
     left: 120px;
-    top: 180px;
+    top: 100px;
 }
 .answers3 {
     position: relative;
     left: 120px;
-    top: 210px;
+    top: 140px;
 }
 
 #body {
@@ -23,7 +36,7 @@
     background-color: white;
     position: relative;
     top: 60px;
-    height: 500px;
+    height: 650px;
     width: 800px;
     margin-left: auto;
     margin-right: auto; 

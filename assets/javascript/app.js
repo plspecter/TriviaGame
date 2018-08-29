@@ -3,6 +3,9 @@ jQuery(document).ready(function () {
     $(".answers2").hide();
     $(".answers3").hide();
     $("#timeRemaining").hide();
+    $("#stopwatch").hide();
+    $("#submit").hide();
+
 
 
     console.log("ready");
@@ -28,29 +31,30 @@ jQuery(document).ready(function () {
         $("#startButton").text('Hide');
         $("#startButton").toggle();
         $("#timeRemaining").toggle();
+        $("#stopwatch").toggle(run);
+        console.log("running")
 
         //Hide the questions and answers until we press start
         //Change the container size to fit all of the questions/answers when we press start
         $(".answers1").toggle();
         $(".answers2").toggle();
         $(".answers3").toggle();
-        answers1 = true;
-
+        $("#submit").toggle();
+    
+    
 
         //My timer starts when start button is pressed
         //stopwatch is decrementing down by the second (1000)
         function run() {
-            if (!timerRunning)
-                intervalId = setInterval(stopwatch.count, 1000);
-            timerRunning = true;
+                intervalId = setInterval(decrement, 1000);
         }
 
         function decrement() {
             stopwatch--;
-            $("#timer").html("<h2>" + stopwatch + "</h2>")
+            $("#stopwatch").html("<h2>" + stopwatch + "</h2>")
             console.log(stopwatch);
 
-            if (number === 0) {
+            if (stopwatch === 0) {
                 stop();
                 alert("Time up!");
             }
