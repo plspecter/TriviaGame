@@ -1,3 +1,21 @@
+#correct{
+    position: relative;
+    left: 250px;
+    top: 176px; 
+}
+
+#incorrect{
+    position: relative;
+    left: 265px;
+    top: 196px; 
+}
+
+#unanswered{
+    position: relative;
+    left: 220px;
+    top: 216px; 
+}
+
 #correctAnswers {
     position: relative;
     left: 120px;
