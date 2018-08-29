@@ -5,18 +5,23 @@ jQuery(document).ready(function () {
     $("#timeRemaining").hide();
     $("#stopwatch").hide();
     $("#submit").hide();
+    $("#correctAnswers").hide();
+    $("#incorrectAnswers").hide();
+    $("#unansweredQuestions").hide();
+
 
 
 
     console.log("ready");
 
+    var userGuess;
     var stopwatch = 120;
-    var intervalId
 
     var answers1 = false;
 
     var correct = 0;
-    var incorrect = 1;
+    var incorrect = 0;
+    var unanswered = 0;
     var timerRunning = false
     var answers = false;
     var timer = {
@@ -40,13 +45,13 @@ jQuery(document).ready(function () {
         $(".answers2").toggle();
         $(".answers3").toggle();
         $("#submit").toggle();
-    
-    
+
+        //When you click the submit button
 
         //My timer starts when start button is pressed
         //stopwatch is decrementing down by the second (1000)
         function run() {
-                intervalId = setInterval(decrement, 1000);
+            intervalId = setInterval(decrement, 1000);
         }
 
         function decrement() {
@@ -59,8 +64,35 @@ jQuery(document).ready(function () {
                 alert("Time up!");
             }
         }
+    });
 
-    
+    //When you click the submit button
+    //Hide the start button when i press it
+    $("#submit").on("click", function () {
+        console.log("this registers");
+     //Everything that disappears after pressing the submit button
+        $("#timeRemaining").toggle();
+        $("#stopwatch").toggle();
+        $("#submit").toggle();
+        $(".answers1").toggle();
+        $(".answers2").toggle();
+        $(".answers3").toggle();
+        //Everything that shows up after u press the submit button 
+        $("#correctAnswers").toggle();
+        $("#incorrectAnswers").toggle();
+        $("#unansweredQuestions").toggle();
+
+        $("#correct").text(correct);
+        $("#incorrect").text(incorrect);
+        $("#unanswered").text(unanswered);
+
+        if (userGuess === $("#ice")) {
+            correct++;
+        }
+
+
+        console.log("running")
+
     });
 });
 

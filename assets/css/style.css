@@ -1,3 +1,22 @@
+#correctAnswers {
+    position: relative;
+    left: 120px;
+    top: 200px;
+}
+
+#incorrectAnswers {
+    position: relative;
+    left: 120px;
+    top: 220px;  
+}
+
+#unansweredQuestions {
+    position: relative;
+    left: 120px;
+    top: 240px;  
+} 
+
+
 #stopwatch {
     size: 12px;
 }
