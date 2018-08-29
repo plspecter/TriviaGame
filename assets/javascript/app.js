@@ -32,12 +32,10 @@ jQuery(document).ready(function () {
 
     //Hide the start button when i press it
     $("#startButton").on("click", function () {
-        console.log("this registers");
         $("#startButton").text('Hide');
         $("#startButton").toggle();
         $("#timeRemaining").toggle();
         $("#stopwatch").toggle(run);
-        console.log("running")
 
         //Hide the questions and answers until we press start
         //Change the container size to fit all of the questions/answers when we press start
@@ -45,6 +43,33 @@ jQuery(document).ready(function () {
         $(".answers2").toggle();
         $(".answers3").toggle();
         $("#submit").toggle();
+
+        //If userGuesses the ice option then they have points added to correct
+
+        if (userGuess === $("#ice")) {
+            correct++;
+        }
+    
+        else {
+            incorrect++;
+        }
+
+
+        if (userGuess === $("#FrozenSeaway")) {
+            correct++;
+        }
+    
+        else {
+            incorrect++;
+        }
+
+        if (userGuess === $("#Palicos")) {
+            correct++;
+        }
+    
+        else {
+            incorrect++;
+        }
 
         //When you click the submit button
 
@@ -66,6 +91,7 @@ jQuery(document).ready(function () {
         }
     });
 
+
     //When you click the submit button
     //Hide the start button when i press it
     $("#submit").on("click", function () {
@@ -86,9 +112,6 @@ jQuery(document).ready(function () {
         $("#incorrect").text(incorrect);
         $("#unanswered").text(unanswered);
 
-        if (userGuess === $("#ice")) {
-            correct++;
-        }
 
 
         console.log("running")
