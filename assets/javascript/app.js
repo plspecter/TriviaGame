@@ -46,7 +46,7 @@ jQuery(document).ready(function () {
 
         //If userGuesses the ice option then they have points added to correct
 
-        if (userGuess === $("#ice")) {
+        if (userGuess === $("#ice", "option2", ".form-check-label")) {
             correct++;
         }
     
