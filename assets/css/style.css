@@ -41,7 +41,7 @@
 
 #submitAnswers {
     position: relative;
-    top: 450px;
+    top: 500px;
     left: 265px;
     height: 60px;
     width: 200px;
@@ -51,17 +51,17 @@
 .answers1 {
     position: relative;
     left: 120px;
-    top: 60px;
+    top: 110px;
 }
 .answers2 {
     position: relative;
     left: 120px;
-    top: 100px;
+    top: 150px;
 }
 .answers3 {
     position: relative;
     left: 120px;
-    top: 140px;
+    top: 190px;
 }
 
 #body {
@@ -109,4 +109,11 @@
     height: 60px;
     width: 200px;
     font-size: 30px;
+}
+
+#timeRemaining {
+    position: absolute;
+    top: 80px;
+    left: 260px;
+    z-index: 1;
 }

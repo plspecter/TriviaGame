@@ -44,9 +44,10 @@ jQuery(document).ready(function () {
         $(".answers3").toggle();
         $("#submit").toggle();
 
-        //If userGuesses the ice option then they have points added to correct
+        //If userGuesses the right option then they have points added to correct
+        //If the userGuesses anything else but the right answer add points to inncorrect
 
-        if (userGuess === $("#ice", "option2", ".form-check-label")) {
+        if (userGuess === $("#ice")) {
             correct++;
         }
     
