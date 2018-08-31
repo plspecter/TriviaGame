@@ -14,7 +14,9 @@ jQuery(document).ready(function () {
 
     console.log("ready");
 
-    var userGuess;
+    var userGuess1;
+    var userGuess2;
+    var userGuess3;
     var stopwatch = 120;
 
     var answers1 = false;
@@ -44,60 +46,71 @@ jQuery(document).ready(function () {
         $(".answers3").toggle();
         $("#submit").toggle();
 
-        //If userGuesses the right option then they have points added to correct
-        //If the userGuesses anything else but the right answer add points to inncorrect
-
-        if (userGuess === $("#ice")) {
-            correct++;
-        }
-    
-        else {
-            incorrect++;
-        }
-
-
-        if (userGuess === $("#FrozenSeaway")) {
-            correct++;
-        }
-    
-        else {
-            incorrect++;
-        }
-
-        if (userGuess === $("#Palicos")) {
-            correct++;
-        }
-    
-        else {
-            incorrect++;
-        }
-
-        //When you click the submit button
-
-        //My timer starts when start button is pressed
-        //stopwatch is decrementing down by the second (1000)
-        function run() {
-            intervalId = setInterval(decrement, 1000);
-        }
-
-        function decrement() {
-            stopwatch--;
-            $("#stopwatch").html("<h2>" + stopwatch + "</h2>")
-            console.log(stopwatch);
-
-            if (stopwatch === 0) {
-                stop();
-                alert("Time up!");
-            }
-        }
     });
+    //If userGuesses the right option then they have points added to correct
+    //If the userGuesses anything else but the right answer add points to inncorrect
+
+    //Set the inputRadioOption name to match the group of radio buttons you are selecting from
+    //Then target the ice id to be correct out of all of those options
+    // if (userGuess1 === $('input[name=inlineRadioOptions1]:checked').val()) {
+    //     if (userGuess1 === $("#ice")) {
+    //         correct++;
+    //         console.log(userGuess);
+    //     }
+
+    //     else {
+    //         incorrect++;
+    //     }
+    // }
+
+
+    // if (userGuess2 === $('input[FrozenSeaway=inlineRadioOptions2]:checked').val()) {
+    //     correct++;
+    //     console.log(userGuess);
+    // }
+
+    // else {
+    //     incorrect++;
+    // }
+
+    // if (userGuess3 === $('input[Palicos=inlineRadioOptions3]:checked').val()) {
+    //     correct++;
+    //     console.log(userGuess);
+    // }
+
+    // else {
+    //     incorrect++;
+    //     console.log(userGuess);
+    // }
+
+    //When you click the submit button
+
+    //My timer starts when start button is pressed
+    //stopwatch is decrementing down by the second (1000)
+    function run() {
+        $("#stopwatch").html("<h2>" + stopwatch + "</h2>")
+        intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+        stopwatch--;
+        $("#stopwatch").html("<h2>" + stopwatch + "</h2>")
+
+        if (stopwatch === 0) {
+            stop();
+            alert("Time up!");
+
+        }
+    }
+
+
 
 
     //When you click the submit button
     //Hide the start button when i press it
     $("#submit").on("click", function () {
         console.log("this registers");
-     //Everything that disappears after pressing the submit button
+        //Everything that disappears after pressing the submit button
         $("#timeRemaining").toggle();
         $("#stopwatch").toggle();
         $("#submit").toggle();
@@ -112,6 +125,41 @@ jQuery(document).ready(function () {
         $("#correct").text(correct);
         $("#incorrect").text(incorrect);
         $("#unanswered").text(unanswered);
+    
+        if (userGuess1 === $('input[name=inlineRadioOptions1]:checked').val()) {
+            if (userGuess1 === $("#ice")) {
+                correct++;
+                console.log(userGuess);
+            }
+    
+            else {
+                incorrect++;
+            }
+        }
+    
+    
+        if (userGuess2 === $('input[FrozenSeaway=inlineRadioOptions2]:checked').val()) {
+            correct++;
+            console.log(userGuess);
+        }
+    
+        else {
+            incorrect++;
+        }
+    
+        if (userGuess3 === $('input[Palicos=inlineRadioOptions3]:checked').val()) {
+            correct++;
+            console.log(userGuess);
+        }
+    
+        else {
+            incorrect++;
+            console.log(userGuess);
+        }
+
+    //Have ice print append to the correct answers
+   
+   
 
 
 
