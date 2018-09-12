@@ -1,37 +1,45 @@
+#Gif {
+    position: relative;
+    left: 270px;
+    top: 400px; 
+    height: 200px;
+    width: 200px;
+}
+
 #correct{
     position: relative;
-    left: 250px;
-    top: 176px; 
+    left: 485px;
+    bottom: 392px; 
 }
 
 #incorrect{
     position: relative;
-    left: 265px;
-    top: 196px; 
+    left: 496px;
+    bottom: 373px; 
 }
 
 #unanswered{
     position: relative;
-    left: 220px;
-    top: 216px; 
+    left: 455px;
+    bottom: 354px; 
 }
 
 #correctAnswers {
     position: relative;
-    left: 120px;
-    top: 200px;
+    left: 350px;
+    bottom: 370px;
 }
 
 #incorrectAnswers {
     position: relative;
-    left: 120px;
-    top: 220px;  
+    left: 350px;
+    bottom: 350px;  
 }
 
 #unansweredQuestions {
     position: relative;
-    left: 120px;
-    top: 240px;  
+    left: 350px;
+    bottom: 330px;  
 } 
 
 
@@ -41,8 +49,8 @@
 
 #submitAnswers {
     position: relative;
-    top: 500px;
-    left: 265px;
+    bottom: 50px;
+    left: 350px;
     height: 60px;
     width: 200px;
     font-size: 30px;
@@ -50,18 +58,18 @@
 
 .answers1 {
     position: relative;
-    left: 120px;
-    top: 110px;
+    left: 350px;
+    bottom: 430px;
 }
 .answers2 {
     position: relative;
-    left: 120px;
-    top: 150px;
+    left: 350px;
+    bottom: 390px;
 }
 .answers3 {
     position: relative;
-    left: 120px;
-    top: 190px;
+    left: 350px;
+    bottom: 350px;
 }
 
 #body {
@@ -73,7 +81,7 @@
     background-color: white;
     position: relative;
     top: 60px;
-    height: 650px;
+    height: 640px;
     width: 800px;
     margin-left: auto;
     margin-right: auto; 
@@ -96,8 +104,8 @@
 
 #StartbuttonContainer {
     position: absolute;
-    top: 290px;
-    left: 290px;
+    top: 310px;
+    left: 520px;
     margin-left: auto;
     margin-right: auto;
     height: 60px;

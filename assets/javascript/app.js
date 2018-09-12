@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+    $("#Gif").hide();
     $(".answers1").hide();
     $(".answers2").hide();
     $(".answers3").hide();
@@ -14,7 +15,7 @@ jQuery(document).ready(function () {
 
     console.log("ready");
 
-    var stopwatch = 1200000000;
+    var stopwatch = 120;
 
     var correct = 0;
     var incorrect = 0;
@@ -116,6 +117,7 @@ jQuery(document).ready(function () {
         $("#correctAnswers").toggle();
         $("#incorrectAnswers").toggle();
         $("#unansweredQuestions").toggle();
+        $("#Gif").toggle();
 
         $("#correct").text(correct);
         $("#incorrect").text(incorrect);
