@@ -139,18 +139,18 @@ jQuery(document).ready(function () {
             console.log(incorrect)
         }
 
-        else if (userGuess1 === wrongAnswers[0, 1, 2, 3, 4, 5, 6, 7, 8]) {
-         incorrect++;
-        //THIS PRINTS THE INNCORRECT ANSWER TO THE HTML
-        $("#incorrect").text(incorrect);
-        $("#incorrect").html();
+        else if (userGuess1 === undefined) {
+        unanswered++;
+        //THIS PRINTS THE UNANSWERS TO THE HTML
+       $("#unanswered").text(unanswered);
+       $("#unanswered").html();
         }
 
         else  {
-            unanswered++;
-            //THIS PRINTS THE UNANSWERS TO THE HTML
-           $("#unanswered").text(unanswered);
-           $("#unanswered").html();
+        incorrect++;
+        //THIS PRINTS THE INNCORRECT ANSWER TO THE HTML
+        $("#incorrect").text(incorrect);
+        $("#incorrect").html();
         }
 
         //==2nd answer
@@ -165,19 +165,20 @@ jQuery(document).ready(function () {
             console.log(incorrect)
         }
 
-        else if (userGuess2 === wrongAnswers) {
-            incorrect++;
-            $("#incorrect").text(incorrect);
-            $("#incorrect").html();
-        }
-
-        else {
+        else if (userGuess2 === undefined) {
             unanswered++;
             //THIS PRINTS THE UNANSWERS TO THE HTML
            $("#unanswered").text(unanswered);
            $("#unanswered").html();
-        }
-
+            }
+    
+            else  {
+            incorrect++;
+            //THIS PRINTS THE INNCORRECT ANSWER TO THE HTML
+            $("#incorrect").text(incorrect);
+            $("#incorrect").html();
+            }
+    
 
         
 
@@ -193,21 +194,21 @@ jQuery(document).ready(function () {
             console.log(incorrect)
         }
 
-        else if ((userGuess3 === wrongAnswers)) {
-            incorrect++;
-            $("#incorrect").text(incorrect);
-            $("#incorrect").html();
-
-        }
-
-        else {
-            unanswered++
+        else if (userGuess3 === undefined) {
+            unanswered++;
             //THIS PRINTS THE UNANSWERS TO THE HTML
            $("#unanswered").text(unanswered);
            $("#unanswered").html();
-        }
+            }
+    
+            else  {
+            incorrect++;
+            //THIS PRINTS THE INNCORRECT ANSWER TO THE HTML
+            $("#incorrect").text(incorrect);
+            $("#incorrect").html();
+            }
+    
 
-        
 
         //Have ice print append to the correct answers
         // if (userGuess1 === answers[i]) {
