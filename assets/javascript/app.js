@@ -14,12 +14,7 @@ jQuery(document).ready(function () {
 
     console.log("ready");
 
-    var userGuess1;
-    var userGuess2;
-    var userGuess3;
-    var stopwatch = 120;
-
-    var answers1 = false;
+    var stopwatch = 1200000000;
 
     var correct = 0;
     var incorrect = 0;
@@ -125,46 +120,119 @@ jQuery(document).ready(function () {
         $("#correct").text(correct);
         $("#incorrect").text(incorrect);
         $("#unanswered").text(unanswered);
-    
-        if (userGuess1 === $('input[name=inlineRadioOptions1]:checked').val()) {
-            if (userGuess1 === $("#ice")) {
-                correct++;
-                console.log(userGuess);
-            }
-    
-            else {
-                incorrect++;
-            }
-        }
-    
-    
-        if (userGuess2 === $('input[FrozenSeaway=inlineRadioOptions2]:checked').val()) {
+
+        var answers = ['ice', 'Frozen Seaway', 'Palicos'];
+        var wrongAnswers = ['poison', 'fire', 'thunder', "Ancestral Steppe", "Sunken Hollow", "Ingle Isle", "Piggly Wigglies", "Annoyances", "Derrick"];
+        userGuess1 = $("input[name='inlineRadioOptions1']:checked").val()
+        userGuess2 = $("input[name='inlineRadioOptions2']:checked").val()
+        userGuess3 = $("input[name='inlineRadioOptions3']:checked").val()
+
+        console.log("USER GUESS 1: ", userGuess1)
+
+
+        if (userGuess1 === answers[0]) {
             correct++;
-            console.log(userGuess);
+             //THIS PRINTS THE CORRECT ANSWER TO THE HTML
+            $("#correct").text(correct);
+            $("#correct").html();
+            console.log(correct, + "correct")
+            console.log(incorrect)
         }
-    
-        else {
-            incorrect++;
+
+        else if (userGuess1 === wrongAnswers[0, 1, 2, 3, 4, 5, 6, 7, 8]) {
+         incorrect++;
+        //THIS PRINTS THE INNCORRECT ANSWER TO THE HTML
+        $("#incorrect").text(incorrect);
+        $("#incorrect").html();
         }
-    
-        if (userGuess3 === $('input[Palicos=inlineRadioOptions3]:checked').val()) {
+
+        else  {
+            unanswered++;
+            //THIS PRINTS THE UNANSWERS TO THE HTML
+           $("#unanswered").text(unanswered);
+           $("#unanswered").html();
+        }
+
+        //==2nd answer
+
+        console.log("USER GUESS 2: ", userGuess2)
+        if (userGuess2 === answers[1]) {
             correct++;
-            console.log(userGuess);
+            $("#correct").text(correct);
+            $("#correct").html();
+            console.log(userGuess2);
+            console.log(correct)
+            console.log(incorrect)
         }
-    
-        else {
+
+        else if (userGuess2 === wrongAnswers) {
             incorrect++;
-            console.log(userGuess);
+            $("#incorrect").text(incorrect);
+            $("#incorrect").html();
         }
 
-    //Have ice print append to the correct answers
-   
-   
+        else {
+            unanswered++;
+            //THIS PRINTS THE UNANSWERS TO THE HTML
+           $("#unanswered").text(unanswered);
+           $("#unanswered").html();
+        }
 
 
+        
 
-        console.log("running")
+        //===3rd answer 
 
+        console.log("USER GUESS 3: ", userGuess3)
+        if (userGuess3 === answers[2]) {
+            correct++;
+            $("#correct").text(correct);
+            $("#correct").html();
+            console.log(userGuess3);
+            console.log(correct)
+            console.log(incorrect)
+        }
+
+        else if ((userGuess3 === wrongAnswers)) {
+            incorrect++;
+            $("#incorrect").text(incorrect);
+            $("#incorrect").html();
+
+        }
+
+        else {
+            unanswered++
+            //THIS PRINTS THE UNANSWERS TO THE HTML
+           $("#unanswered").text(unanswered);
+           $("#unanswered").html();
+        }
+
+        
+
+        //Have ice print append to the correct answers
+        // if (userGuess1 === answers[i]) {
+        //     correct++
+        // }
+
+        // else if (userGuess1 === wrongAnswers[i]) {
+        //     incorrect++
+        // }
+        // console.log("USER GUESS 2: ", userGuess2[i]) 
+        // if (userGuess2 = answers) {
+        //     correct++
+        // }
+
+        // else if (userGuess2 === wrongAnswers[i]) {
+        //     incorrect++
+        // }
+        // console.log("USER GUESS 3: ", userGuess3[i]) 
+        // if (userGuess3 = answers) {
+        //     correct++
+        // }
+
+        // else if (userGuess3 === wrongAnswers[i]) {
+        //     incorrect++
+        // }
     });
 });
 
